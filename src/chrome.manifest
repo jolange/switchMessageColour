@@ -1,0 +1,8 @@
+content   switchMessageColour                content/
+skin      switchMessageColour  classic/1.0   skin/
+locale    switchMessageColour  en-US         locale/en-US/
+
+overlay chrome://browser/content/browser.xul      chrome://switchMessageColour/content/toolbar-button.xul
+overlay chrome://messenger/content/messenger.xul  chrome://switchMessageColour/content/toolbar-button.xul
+
+style chrome://global/content/toolbar-button.xul  chrome://xulschoolhello/skin/toolbar.css

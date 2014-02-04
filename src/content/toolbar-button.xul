@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://switchMessageColour/skin/overlay.css" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://switchMessageColour/skin/toolbar.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://switchMessageColour/locale/overlay.dtd">
+
+<overlay id="switchMessageColour-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://switchMessageColour/content/toolbar-button.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="switchMessageColour-string-bundle"
+      src="chrome://switchMessageColour/locale/overlay.properties" />
+  </stringbundleset>
+
+
+  <!-- FF -->
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="switchMessageColour-toolbar-button" />
+  </toolbarpalette>
+  
+  <!-- TB -->
+  <toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="switchMessageColour-toolbar-button" />
+  </toolbarpalette>
+
+
+  <!-- Button -->
+  <toolbarbutton id="switchMessageColour-toolbar-button"
+    class="toolbarbutton-1 chromeclass-toolbar-additional" 
+    label="&switchMessageColour.menu-button.label;"
+    tooltiptext="&switchMessageColour.menu-button.label;"
+    image="chrome://switchMessageColour/skin/toolbarIcon.png"
+    oncommand="switchMessageColourChrome.overlay.switchColour(event);" />
+
+        
+  <!-- optional Stuff -->
+
+  <!-- menu button -->
+<!--
+  <vbox id="appmenuSecondaryPane">
+    <menuitem id="switchMessageColour-menu-button"
+      label="&switchMessageColour.menu-button.label;"
+      accesskey="&switchMessageColour.menu-button.accesskey;"
+      oncommand="switchMessageColourChrome.overlay.switchColour(event);" />
+  </vbox>
+-->
+
+<!--
+  <menubar id="main-menubar">
+    <menu id="xulschoolhello-hello-menu" label="&xulschoolhello.hello.label;"
+      accesskey="&xulschoolhello.helloMenu.accesskey;" insertafter="helpMenu">
+      <menupopup>
+        <menuitem id="xulschoolhello-hello-menu-item"
+          label="&xulschoolhello.hello.label;"
+          accesskey="&xulschoolhello.helloItem.accesskey;"
+          oncommand="XULSchoolChrome.overlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </menubar>
+-->
+
+<!--
+  <vbox id="appmenuSecondaryPane">
+    <menu id="xulschoolhello-hello-menu-2" label="&xulschoolhello.hello.label;"
+      accesskey="&xulschoolhello.helloMenu.accesskey;"
+      insertafter="appmenu_addons">
+      <menupopup>
+        <menuitem id="xulschoolhello-hello-menu-item-2"
+          label="&xulschoolhello.hello.label;"
+          accesskey="&xulschoolhello.helloItem.accesskey;"
+          oncommand="XULSchoolChrome.overlay.sayHello(event);" />
+      </menupopup>
+    </menu>
+  </vbox>
+-->
+</overlay>
